@@ -47,6 +47,22 @@ header a:hover {
   color: #38bdf8;
 }
 
+/* Initial hidden state */
+.spost,
+.Tute_covers {
+  opacity: 0;
+  transform: scale(0.9) translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* When visible */
+.spost.show,
+.Tute_covers.show {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+
 .btn {
   margin-top: 20px;
   padding: 10px 20px;
@@ -58,12 +74,14 @@ header a:hover {
 }
 
 
+/* Portfolio grid (default desktop) */
 .portfolio {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 40px;
 }
+
 
 .spost {
   width: 100%;
@@ -160,14 +178,18 @@ header a:hover {
   transform: scale(1.03);
 }
 
+/* Tablet */
 @media (max-width: 768px) {
   .portfolio {
     grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
   }
 }
 
+/* Mobile – 1 column */
 @media (max-width: 480px) {
   .portfolio {
     grid-template-columns: 1fr;
+    padding: 15px;
   }
 }
