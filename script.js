@@ -1,4 +1,6 @@
-// Simple scroll animation
+/* =========================
+   SECTION SCROLL ANIMATION
+========================= */
 const sections = document.querySelectorAll('.section');
 
 window.addEventListener('scroll', () => {
@@ -12,3 +14,24 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+
+/* =========================
+   IMAGE WATCH (SCROLL) ANIMATION
+========================= */
+const images = document.querySelectorAll('.spost, .Tute_covers');
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  },
+  {
+    threshold: 0.2
+  }
+);
+
+images.forEach(img => observer.observe(img));
