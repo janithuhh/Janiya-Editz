@@ -98,4 +98,4 @@ function toggleAutoplay() {
 
 /* Init */
 updateCoverflow();
-container.focus();
+
