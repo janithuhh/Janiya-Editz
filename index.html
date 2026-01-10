@@ -7,6 +7,7 @@
 	<link rel="icon" type="image/png" href="Dark Green Modern Initial Logo (2).png">
 
 	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="coverflow.css" />
 </head>
 <body >
 
@@ -26,6 +27,71 @@
 		<p class="fade-in delay">Graphic Designer</p>
 		<a href="#my_work"><button class="btn">View My Work</button></a>
 	</section>
+
+	  <!-- Home Section -->
+    <section id="home" class="section">
+        <div class="coverflow-wrapper">
+  
+            <div class="coverflow-container" tabindex="0">
+                <div class="coverflow" id="coverflow">
+                    <div class="coverflow-item" data-index="0">
+                        <div class="cover image-loading">
+                            <img src="500.png" alt="Mountain Landscape" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="coverflow-item" data-index="1">
+                        <div class="cover image-loading">
+                            <img src="501.jpg" alt="501" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="coverflow-item" data-index="2">
+                        <div class="cover image-loading">
+                            <img src="517.png" alt="517" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="coverflow-item" data-index="3">
+                        <div class="cover image-loading">
+                            <img src="516.png" alt="516" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="coverflow-item" data-index="4">
+                        <div class="cover image-loading">
+                            <img src="520.png" alt="520" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="coverflow-item" data-index="5">
+                        <div class="cover image-loading">
+                            <img src="531.jpg" alt="531" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="coverflow-item" data-index="6">
+                        <div class="cover image-loading">
+                            <img src="530.jpg" alt="530" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                    </div>
+                </div>
+
+                <button class="nav-button prev" onclick="navigate(-1)">‹</button>
+                <button class="nav-button next" onclick="navigate(1)">›</button>
+
+                <div class="dots-container" id="dots"></div>
+                
+                <!-- Play/Pause Button -->
+                <button class="play-pause-button" id="playPauseBtn" onclick="toggleAutoplay()">
+                    <span class="play-icon">▶</span>
+                    <span class="pause-icon" style="display: none;">❚❚</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
 	<h1 class="glow-rectangle">Social Media Posts</h1>
 
 	<section class="portfolio" id="my_work">
@@ -101,6 +167,6 @@
 		<p><center>© 2026 Janithu. All rights reserved.</center></p>
 	</footer>
 
-	<script src="script.js"></script>
+	<script src="script.js"></script>	<script src="coverflow.js"></script>
 </body>
 </html>
